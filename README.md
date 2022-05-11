@@ -9,7 +9,7 @@
 # KaseiCoin-Crowdsale
 
 This repository represents a fungible token that is ERC-20 compliant and that will be minted by using a Crowdsale contract from the OpenZeppelin Solidity library.
-The contract allows user manage the entire crowdsale process, allowing users to send ether to the contract and in return receive KaseiCoin tokens. 
+The contract allows user manage the entire crowdsale process, allowing users to send ether to the contract and in return receive KaseiCoin tokens.
 Contract mints the tokens automatically and distributes them to buyers in one transaction.
 
 ---
@@ -29,7 +29,9 @@ Solidity version:
 ```
 pragma solidity ^0.5.0
 ```
+
 OpenZeppelin libraries:
+
 ```
 CrowdSale:
 
@@ -45,23 +47,134 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5
 
 ---
 
-## How to run 
+## How to run
 
 ### Step 1 - Install Ganache
 
+Pls, download and install `Ganache` from `https://trufflesuite.com/ganache/`
+
 ### Step 2 - Install and Configure the wallet Metamask
 
-### Step 3 - Open the contracts in the Remix IDE
+Pls, download and install wallet Metamask from `https://metamask.io`
 
-### Step 4 - Compile and deploy
+Configure the Metamask:
+
+- copy `private` account keys from Ganache and import them to create the Accounts
+
+![Screenshot](Images/private_key.JPG)
+
+- configure network like on the screenshot
+
+![Screenshot](Images/network.JPG)
+
+### Step 3 - Open the smart contracts in the Remix IDE
+
+![Screenshot](Images/sc.JPG)
+
+Inject the testing account from the Ganache:
+
+![Screenshot](Images/inject_0.JPG)
+
+Confirm injection:
+
+![Screenshot](Images/inject_1.JPG)
+
+### Step 4 - Compile and deploy `Deployer contract`
+
+- compile smart contracts:
+
+`KaseiCoin:`
+
+![Screenshot](Images/kasei_coin_compile.JPG)
+
+`KaseiCoinCrowdsale and KaseiCoinCrowdsaleDeployer:`
+
+![Screenshot](Images/crowdsale_compile.JPG)
+
+`Deploy Deployer`
+
+Pls, select and provide:
+
+- deployer contract;
+
+- NAME of Coin (Kasei);
+
+- SYMBOL of Coin (KAS);
+
+- WALLET (any valid address).
+
+![Screenshot](Images/deploy_deployer.JPG)
+
+Click on `Transact` and confirm transaction in the Metamask
+
+![Screenshot](Images/deploy_deployer_meta.JPG)
+
+Check transaction in the Ganache:
+
+![Screenshot](Images/deployer_ganache.JPG)
+
+Account balance:
+
+![Screenshot](Images/deployer_acc_ganache.JPG)
 
 ### Step 5 - Link the contract's addresses to the Remix
 
+First use functions under CrowdSaleDeployer for taking contract's addresses:
+
+`CrowdSale` contract
+
+![Screenshot](Images/crowdsale_address.JPG)
+
+`KaseiCoin` contract
+
+![Screenshot](Images/token_address.JPG)
+
+Second put addresses to `At address` field for linking contracts:
+
+![Screenshot](Images/link1_address.JPG)
+
+![Screenshot](Images/link2_address.JPG)
+
+Finally contracts and their functions are got available for testing:
+
+![Screenshot](Images/crowdsale_functions.JPG)
+
+and
+
+![Screenshot](Images/coin_functions.JPG)
+
 ### Step 6 - Interact with contracts
+
+Try to buy tokens. Input value and address:
+
+In my case Value is `5 Ethers`.
+
+![Screenshot](Images/buy1.JPG)
+
+Confirm with Metamask:
+
+![Screenshot](Images/buy_meta.JPG)
+
+Check transaction in the Ganache:
+
+![Screenshot](Images/buy_ganache.JPG)
+
+and with function `balanceOf` check balance associated with testing account(s)
+
+![Screenshot](Images/buy_balance.JPG)
+
+View the total supply of minted tokens:
+
+![Screenshot](Images/total_supply.JPG)
+
+View the amount of wei that has been raised in the crowdsale contract:
+
+![Screenshot](Images/wei_raised.JPG)
 
 ---
 
 ## Example of running
+
 ---
 
 ## Contributors
