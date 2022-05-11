@@ -45,6 +45,25 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5
 
 ---
 
+## How to run 
+
+### Step 1 - Install Ganache
+
+### Step 2 - Install and Configure the wallet Metamask
+
+### Step 3 - Open the contracts in the Remix IDE
+
+### Step 4 - Compile and deploy
+
+### Step 5 - Link the contract's addresses to the Remix
+
+### Step 6 - Interact with contracts
+
+---
+
+## Example of running
+---
+
 ## Contributors
 
 Glupak Vladislav [Linkedin](https://www.linkedin.com/in/vladislav-glupak/)
