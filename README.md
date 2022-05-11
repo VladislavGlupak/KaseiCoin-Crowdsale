@@ -22,10 +22,25 @@ This project leverages the following tools for financial analysis:
 
 - [Remix IDE](https://remix.ethereum.org) - Remix IDE allows developing, deploying and administering smart contracts for Ethereum like blockchains.
 
+- [TruffleSuite - Ganache](https://trufflesuite.com/ganache/) - a personal Ethereum blockchain.
+
 Solidity version:
 
 ```
 pragma solidity ^0.5.0
+```
+OpenZeppelin libraries:
+```
+CrowdSale:
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/Crowdsale.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/emission/MintedCrowdsale.sol";
+
+ERC20 token:
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20Detailed.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20Mintable.sol";
 ```
 
 ---
