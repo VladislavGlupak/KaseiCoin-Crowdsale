@@ -173,10 +173,6 @@ View the amount of wei that has been raised in the crowdsale contract:
 
 ---
 
-## Example of running
-
----
-
 ## Contributors
 
 Glupak Vladislav [Linkedin](https://www.linkedin.com/in/vladislav-glupak/)
